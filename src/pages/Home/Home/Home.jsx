@@ -1,11 +1,11 @@
 import Banner from "../Banner/Banner";
-import FoodFeature from "./HomeSection/FoodFeature";
+import Card from "./HomeSection/Card";
 
 const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <FoodFeature></FoodFeature>
+            <Card></Card>
         </div>
     );
 };

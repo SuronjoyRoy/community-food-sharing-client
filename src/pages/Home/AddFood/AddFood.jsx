@@ -7,7 +7,7 @@ const AddFood = () => {
         const form = e.target;
         const name = form.name.value
         const photo = form.photo.value
-        const food = form.food.value
+        const quantity = form.quantity.value
         const location = form.location.value
         const date = form.date.value
         const notes = form.notes.value
@@ -17,7 +17,7 @@ const AddFood = () => {
         const newFood = {
             name,
             photo,
-            food,
+            quantity,
             location,
             date,
             notes
@@ -27,7 +27,7 @@ const AddFood = () => {
 
         // send data to the server side
 
-        fetch('http://localhost:4000/food', {
+        fetch('http://localhost:4000/foods', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -94,7 +94,7 @@ const AddFood = () => {
                     </label>
                     <label className="input-group">
                         <select
-                            name="food"
+                            name="quantity"
                             id=""
                             className=" input input-bordered w-full"
                         >

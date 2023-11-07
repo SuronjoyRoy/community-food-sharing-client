@@ -1,18 +1,10 @@
 import { Link, NavLink } from "react-router-dom";
 import userDefaultPic from '../../../../assets/img/user.png';
 import logo from "../../../../assets/img/logo (2).png";
-// import { useContext } from "react";
-// import { AuthContect } from "../provider/AuthProvider";
+
 
 const NavBar = () => {
-    // const { user, logOut } = useContext(AuthContect);
-
-    // const handlSingOut = () => {
-    //     logOut()
-    //         .then()
-    //         .catch()
-    // }
-
+   
     const navLinks = <>
 
         <li><NavLink to='/'>Home</NavLink></li>
