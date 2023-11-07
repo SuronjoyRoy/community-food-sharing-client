@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 const Cards = ({ food }) => {
     const { _id, name, photo, quantity, location, date, notes } = food;
@@ -14,7 +15,9 @@ const Cards = ({ food }) => {
                 <p>{notes}</p>
             </div>
             <div className="card-actions justify-center">
-                <button className="btn btn-primary">View Details</button>
+                <Link to={`/avaiablefoods/${_id}`}>
+                    <button className="btn btn-primary">View Details</button>
+                </Link>
             </div>
         </div>
     );

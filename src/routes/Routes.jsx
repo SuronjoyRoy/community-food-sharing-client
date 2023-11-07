@@ -8,6 +8,7 @@ import ManageMyFoods from "../pages/Home/ManageMyFoods/ManageMyFoods";
 import MyFoodRequest from "../pages/Home/MyFoodRequest/MyFoodRequest";
 import Login from "../pages/Home/Login/Login";
 import Registration from "../pages/Home/Registration/Registration";
+import FoodDetails from "../pages/Home/Home/HomeSection/FoodDetails";
 
 
 
@@ -46,6 +47,11 @@ const router = createBrowserRouter([
         {
           path:'/registration',
           element:<Registration></Registration>
+        },
+        {
+          path:'/avaiablefoods/:id',
+          element:<FoodDetails></FoodDetails>,
+          // loader:({params}) => fetch(`http://localhost:4000/foods/${params.id}`)
         }
       ]
     },

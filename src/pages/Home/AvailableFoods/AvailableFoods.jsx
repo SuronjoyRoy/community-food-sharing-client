@@ -7,7 +7,7 @@ const AvailableFoods = () => {
     // const foods = useLoaderData();
     const [food, setFood] = useState([]);
 
-    console.log(food)
+    // console.log(food)
     useEffect(() => {
         axios
             .get("http://localhost:4000/foods")

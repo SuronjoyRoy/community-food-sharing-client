@@ -23,7 +23,7 @@ const AddFood = () => {
             notes
 
         }
-        console.log(newFood)
+        
 
         // send data to the server side
 
