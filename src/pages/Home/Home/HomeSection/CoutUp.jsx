@@ -2,7 +2,7 @@ import CountUp from "react-countup";
 
 const CoutUp = () => {
     return (
-        <div>
+        <div className="py-5">
             <div className='max-w-6xl mx-auto text-black p-12 flex justify-around border-2 border-green-500 mb-12 rounded-lg'>
                 <div className='flex flex-col items-center justify-center text-center space-y-5'>
                     <div className='text-4xl font-bold'><CountUp start={1} end={100} duration={7} delay={1}></CountUp> k+</div>

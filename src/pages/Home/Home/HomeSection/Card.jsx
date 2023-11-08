@@ -14,7 +14,7 @@ const Card = () => {
 
             </div>
             <Link to='/avaiablefoods'>
-                <div className="flex justify-end mb-3">
+                <div className="flex justify-end mb-7">
                     <button className="btn btn-success" type="button">Show All Food</button>
                 </div>
             </Link>
