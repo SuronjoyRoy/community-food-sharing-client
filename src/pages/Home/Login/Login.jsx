@@ -27,7 +27,7 @@ const Login = () => {
                 'login Successfully!',
                'Congratulations!',
                'success');
-            navigate(location?.state? location.state : '/managemyfoods')
+            navigate(location?.state? location.state : '/')
 
 
         })

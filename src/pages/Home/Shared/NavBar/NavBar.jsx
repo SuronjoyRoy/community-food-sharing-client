@@ -1,10 +1,15 @@
 import { Link, NavLink } from "react-router-dom";
 import userDefaultPic from '../../../../assets/img/user.png';
 import logo from "../../../../assets/img/logo (2).png";
+import UseAuth from "../../../../providers/UseAuth";
 
 
 const NavBar = () => {
    
+    const {user, logOut} = UseAuth();
+    const handlSingOut = () =>{
+        logOut()
+    }
     const navLinks = <>
 
         <li><NavLink to='/'>Home</NavLink></li>
@@ -43,9 +48,9 @@ const NavBar = () => {
                     </div>
                 </label>
                 {
-                    // user ?
-                    //     <button onClick={handlSingOut} className="btn">Sing Out</button>
-                    //     :
+                    user?.email ?
+                        <button onClick={handlSingOut} className="btn">Sing Out</button>
+                        :
                         <Link to='/login'>
                             <button className="btn">Login</button>
                         </Link>
