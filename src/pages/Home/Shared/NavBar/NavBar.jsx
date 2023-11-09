@@ -7,10 +7,7 @@ import UseAuth from "../../../../providers/UseAuth";
 const NavBar = () => {
    
     const {user, logOut} = UseAuth();
-    console.log(user)
-    // const handlSingOut = () =>{
-    //     // logOut()
-    // }
+    
     const navLinks = <>
 
         <li><NavLink to='/'>Home</NavLink></li>

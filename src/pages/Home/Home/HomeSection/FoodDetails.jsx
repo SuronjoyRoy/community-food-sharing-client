@@ -19,9 +19,11 @@ const FoodDetails = () => {
         e.preventDefault();
         const form = e.target;
         const name = form.name.value
+        // const photo = form.photo.value
         const id = form.id.value
         const location = form.location.value
         const date = form.date.value
+        // const notes = form.notes.value
         const donarEmail = form.donarEmail.value
         const donarName = form.donarName.value
         const money = form.money.value
@@ -77,6 +79,8 @@ const FoodDetails = () => {
                                 <label>Donation Money:</label>
                                 <input name="money" className="border" type="text"/>
                                 <br />
+
+                                {/* Submit Button */}
                                 <button className="btn btn-info" type="submit">Request</button>
                                 
                             </form>
