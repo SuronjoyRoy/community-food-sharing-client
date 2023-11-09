@@ -30,13 +30,6 @@ const Login = () => {
         
     }
 
-    // const handleSingInGoogle = () => {
-    //     signInwithGoogle()
-    //     .then(result=>{
-    //         console.log(result.user)
-    //     })
-    //    
-    // }
     const handleSingInGoogle = async() => {
         try{
           await signInwithGoogle()
