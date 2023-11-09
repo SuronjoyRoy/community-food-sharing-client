@@ -72,18 +72,10 @@ const FoodDetails = () => {
                                 <input type="text" name="date" defaultValue={date} readOnly />
                                 <br />
                                 <label>Additional Notes:</label>
-                                <input
-                                    type="text"
-
-
-                                />
+                                <textarea className="w-full rounded-lg border-black border-2" name="" id="" cols="" rows="5"></textarea>
                                 <br />
                                 <label>Donation Money:</label>
-                                <input
-                                    type="text"
-
-
-                                />
+                                <input className="border" type="text"/>
                                 <br />
 
                                 {/* Submit Button */}
