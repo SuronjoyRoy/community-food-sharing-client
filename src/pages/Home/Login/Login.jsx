@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import Swal from 'sweetalert2'
 import { AuthContext } from '../../../providers/AuthProvider';
+import toast from 'react-hot-toast';
 
 
 const Login = () => {
@@ -11,44 +11,43 @@ const Login = () => {
     console.log(location);
 
 
-    const handlLogin = e => {
+    const handlLogin = async(e) => {
         e.preventDefault();
         console.log(e.currentTarget);
         const form = new FormData(e.currentTarget);
         const email = form.get('email');
         const password = form.get('password');
         // console.log(email, password);
+        const toastId = toast.loading('logged in')
+            try{
+              await signIn(email, password)
+              toast.success('logged in successfully', {id: toastId})
+              navigate('/');
+            }catch(err){
+              toast.error(err.message, {id: toastId})
+            }
 
-
-        signIn(email, password)
-        .then(result=>{
-            console.log(result.user);
-            Swal.fire(
-                'login Successfully!',
-               'Congratulations!',
-               'success');
-            navigate(location?.state? location.state : '/')
-
-
-        })
-        .catch(error=>{
-            console.error(error)
-            Swal.fire(
-                'login failed!',
-               'bad lauck!',
-               'question');
-        })
+        
     }
 
-    const handleSingInGoogle = () => {
-        signInwithGoogle()
-        .then(result=>{
-            console.log(result.user)
-        })
-        .catch(error=>{
-            console.error(error)
-        })
-    }
+    // const handleSingInGoogle = () => {
+    //     signInwithGoogle()
+    //     .then(result=>{
+    //         console.log(result.user)
+    //     })
+    //     .catch(error=>{
+    //         console.error(error)
+    //     })
+    // }
+    const handleSingInGoogle = async() => {
+        try{
+          await signInwithGoogle()
+            toast.success('logged in success')
+            navigate('/');
+          }catch(err){
+            toast.error(err.message)
+          }
+        }
 
     return (
         <div className='bg-[#0000001c] p-20'>

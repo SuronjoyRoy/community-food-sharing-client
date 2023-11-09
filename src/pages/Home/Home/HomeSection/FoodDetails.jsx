@@ -19,12 +19,15 @@ const FoodDetails = () => {
         e.preventDefault();
         const form = e.target;
         const name = form.name.value
-        const photo = form.photo.value
-        const quantity = form.quantity.value
+        // const photo = form.photo.value
+        const id = form.id.value
         const location = form.location.value
         const date = form.date.value
-        const notes = form.notes.value
-        console.log(name, photo, quantity,location,date,notes)
+        // const notes = form.notes.value
+        const donarEmail = form.donarEmail.value
+        const donarName = form.donarName.value
+        const money = form.money.value
+        console.log(name, id,location,date, donarEmail, donarName,money)
     }
     return (
         <div>
@@ -55,10 +58,10 @@ const FoodDetails = () => {
                                 <input type="text" name="id" defaultValue={id} readOnly />
                                 <br />
                                 <label>Food Donator Email:</label>
-                                <input type="text" value={user?.email} readOnly />
+                                <input type="text" name="donarEmail" value={user?.email} readOnly />
                                 <br />
                                 <label>Food Donator Name:</label>
-                                <input type="text" value={user?.displayName} readOnly />
+                                <input type="text" name="donarName" value={user?.displayName} readOnly />
 
                                 <br />
                                 <label>Request Date:</label>
@@ -71,10 +74,10 @@ const FoodDetails = () => {
                                 <input type="text" name="date" defaultValue={date} readOnly />
                                 <br />
                                 <label>Additional Notes:</label>
-                                <textarea className="w-full rounded-lg border-black border-2" name="" id="" cols="" rows="5"></textarea>
+                                <textarea  className="w-full rounded-lg border-black border-2" name="" id="" cols="" rows="5"></textarea>
                                 <br />
                                 <label>Donation Money:</label>
-                                <input className="border" type="text"/>
+                                <input name="money" className="border" type="text"/>
                                 <br />
 
                                 {/* Submit Button */}

@@ -7,9 +7,10 @@ import UseAuth from "../../../../providers/UseAuth";
 const NavBar = () => {
    
     const {user, logOut} = UseAuth();
-    const handlSingOut = () =>{
-        logOut()
-    }
+    console.log(user)
+    // const handlSingOut = () =>{
+    //     // logOut()
+    // }
     const navLinks = <>
 
         <li><NavLink to='/'>Home</NavLink></li>
@@ -47,18 +48,25 @@ const NavBar = () => {
                         <img src={userDefaultPic} />
                     </div>
                 </label>
-                {
-                    user?.email ?
-                        <button onClick={handlSingOut} className="btn">Sing Out</button>
-                        :
-                        <Link to='/login'>
-                            <button className="btn">Login</button>
-                        </Link>
-                }
-
+                {user ? (
+          <>
+            
+            <div className="flex items-center gap-3">
+            <img className="rounded-full w-[40px]" src={user.photoURL} alt="" />
+            <span className="mr-2">{user.displayName}</span>
+            </div>
+            <button onClick={logOut} className="btn btn-ghost">
+              LogOut
+            </button>
+          </>
+        ) : (
+          <Link to="login">
+            <button className="btn btn-ghost">Login</button>
+          </Link>
+        )}
             </div>
         </div>
-        
+
     );
 };
 

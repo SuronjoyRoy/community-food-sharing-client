@@ -15,9 +15,10 @@ const AddFood = () => {
         const location = form.location.value
         const date = form.date.value
         const notes = form.notes.value
-        // const donarName = user?.displayName
-        // const donarImg = user?.img
-        // const donarEmail = user?.email
+        const donarName = user?.displayName
+        const donarImg = user?.imageURL
+        const donarEmail = user?.email
+        const status = 'available'
 
         form.reset();
 
@@ -27,8 +28,11 @@ const AddFood = () => {
             quantity,
             location,
             date,
-            notes
-
+            notes,
+            donarName,
+            donarImg,
+            donarEmail,
+            status
         }
         
 
