@@ -18,7 +18,14 @@ const FoodDetails = () => {
 
     const handleSubmit = e => {
         e.preventDefault();
-        console.log('handle clicked')
+        const form = e.target;
+        const name = form.name.value
+        const photo = form.photo.value
+        const quantity = form.quantity.value
+        const location = form.location.value
+        const date = form.date.value
+        const notes = form.notes.value
+        console.log(name, photo, quantity,location,date,notes)
     }
     return (
         <div>
@@ -40,13 +47,13 @@ const FoodDetails = () => {
                         <div className="modal-box">
                             <form onSubmit={handleSubmit}>
                                 <label>Food Name:</label>
-                                <input type="text" value={name} readOnly />
+                                <input type="text" name="name" defaultValue={name} readOnly />
                                 <br />
                                 <label>Food Image:</label>
                                 <img className="w-[30%]" src={photo} alt="" />
                                 <br />
                                 <label>Food ID:</label>
-                                <input type="text" value={id} readOnly />
+                                <input type="text" name="id" defaultValue={id} readOnly />
                                 <br />
                                 <label>Food Donator Email:</label>
                                 <input type="text" value={user?.email} readOnly />
@@ -59,10 +66,10 @@ const FoodDetails = () => {
                                 <input type="text" value={new Date().toLocaleString()} readOnly />
                                 <br />
                                 <label>Pickup Location:</label>
-                                <input type="text" value={location} readOnly />
+                                <input type="text" name="location" defaultValue={location} readOnly />
                                 <br />
                                 <label>Expire Date:</label>
-                                <input type="text" value={date} readOnly />
+                                <input type="text" name="date" defaultValue={date} readOnly />
                                 <br />
                                 <label>Additional Notes:</label>
                                 <input
@@ -80,7 +87,7 @@ const FoodDetails = () => {
                                 <br />
 
                                 {/* Submit Button */}
-                                <button className="btn btn-sucess" type="submit">Request</button>
+                                <button className="btn btn-info" type="submit">Request</button>
                                 
                             </form>
                         </div>
