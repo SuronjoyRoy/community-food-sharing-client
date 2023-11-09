@@ -20,12 +20,12 @@ const router = createBrowserRouter([
         {
             path:'/',
             element:<Home></Home>,
-            loader: () => fetch('http://localhost:4000/foods')
+            loader: () => fetch('https://community-food-sharing-server-xi.vercel.app/foods')
         },
         {
           path:'/avaiablefoods',
           element:<AvailableFoods></AvailableFoods>,
-          loader: () => fetch('http://localhost:4000/foods')
+          loader: () => fetch('https://community-food-sharing-server-xi.vercel.app/foods')
         },
         {
           path:'/addfood',
@@ -50,7 +50,7 @@ const router = createBrowserRouter([
         {
           path:'/avaiablefoods/:id',
           element:<FoodDetails></FoodDetails>,
-          // loader:({params}) => fetch(`http://localhost:4000/foods/${params.id}`)
+          // loader:({params}) => fetch(`https://community-food-sharing-server-xi.vercel.app/foods/${params.id}`)
         }
       ]
     },

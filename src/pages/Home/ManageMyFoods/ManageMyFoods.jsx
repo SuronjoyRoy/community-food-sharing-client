@@ -5,7 +5,7 @@ import Swal from "sweetalert2";
 const ManageMyFoods = () => {
     const [request, setRequest] = useState([])
     useEffect(() => {
-        fetch('http://localhost:4000/requestfoods')
+        fetch('https://community-food-sharing-server-xi.vercel.app/requestfoods')
             .then(res => res.json())
             .then(data => setRequest(data))
         console.log(setRequest)
@@ -22,7 +22,7 @@ const ManageMyFoods = () => {
         confirmButtonText: "Yes, delete it!"
       }).then((result) => {
         if (result.isConfirmed) {
-       fetch(`http://localhost:4000/requestfoods${id}`,{
+       fetch(`https://community-food-sharing-server-xi.vercel.app/requestfoods${id}`,{
       method:'DELETE'
        })
        .then(res=>res.json())

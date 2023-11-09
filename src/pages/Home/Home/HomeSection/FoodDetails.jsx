@@ -9,7 +9,7 @@ const FoodDetails = () => {
     const { id } = useParams();
     
     useEffect(() => {
-        fetch(`http://localhost:4000/foods/${id}`)
+        fetch(`https://community-food-sharing-server-xi.vercel.app/foods/${id}`)
             .then(res => res.json())
             .then(data => setFood(data))
     }, [id])

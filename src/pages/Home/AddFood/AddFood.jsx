@@ -38,7 +38,7 @@ const AddFood = () => {
 
         // send data to the server side
 
-        fetch('http://localhost:4000/foods', {
+        fetch('https://community-food-sharing-server-xi.vercel.app/foods', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
