@@ -77,8 +77,6 @@ const FoodDetails = () => {
                                 <label>Donation Money:</label>
                                 <input name="money" className="border" type="text"/>
                                 <br />
-
-                                {/* Submit Button */}
                                 <button className="btn btn-info" type="submit">Request</button>
                                 
                             </form>

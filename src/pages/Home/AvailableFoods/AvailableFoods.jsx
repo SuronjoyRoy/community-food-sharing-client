@@ -7,7 +7,6 @@ const AvailableFoods = () => {
     // const foods = useLoaderData();
     const [food, setFood] = useState([]);
 
-    // console.log(food)
     useEffect(() => {
         axios
             .get("https://community-food-sharing-server-xi.vercel.app/foods")
