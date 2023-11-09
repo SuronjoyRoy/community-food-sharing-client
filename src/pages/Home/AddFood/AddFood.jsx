@@ -1,8 +1,12 @@
+import { useContext } from "react";
 import Swal from "sweetalert2";
+import { AuthContext } from "../../../providers/AuthProvider";
 
 const AddFood = () => {
+   const {user} = useContext(AuthContext);
 
     const handleAddFood = e => {
+
         e.preventDefault()
         const form = e.target;
         const name = form.name.value
@@ -11,6 +15,9 @@ const AddFood = () => {
         const location = form.location.value
         const date = form.date.value
         const notes = form.notes.value
+        // const donarName = user?.displayName
+        // const donarImg = user?.img
+        // const donarEmail = user?.email
 
         form.reset();
 

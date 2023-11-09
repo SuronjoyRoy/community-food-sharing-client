@@ -6,9 +6,8 @@ import { AuthContext } from "../../../../providers/AuthProvider";
 const FoodDetails = () => {
     const { user } = useContext(AuthContext);
     const [food, setFood] = useState([]);
-    console.log(food);
     const { id } = useParams();
-    console.log(id)
+    
     useEffect(() => {
         fetch(`http://localhost:4000/foods/${id}`)
             .then(res => res.json())
