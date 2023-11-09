@@ -19,7 +19,6 @@ const FoodDetails = () => {
         e.preventDefault();
         const form = e.target;
         const name = form.name.value
-        // const photo = form.photo.value
         const id = form.id.value
         const location = form.location.value
         const date = form.date.value
