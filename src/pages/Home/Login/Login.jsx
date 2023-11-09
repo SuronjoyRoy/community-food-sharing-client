@@ -35,9 +35,7 @@ const Login = () => {
     //     .then(result=>{
     //         console.log(result.user)
     //     })
-    //     .catch(error=>{
-    //         console.error(error)
-    //     })
+    //    
     // }
     const handleSingInGoogle = async() => {
         try{
