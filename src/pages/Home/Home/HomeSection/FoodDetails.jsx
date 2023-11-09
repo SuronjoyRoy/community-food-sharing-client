@@ -23,7 +23,6 @@ const FoodDetails = () => {
         const id = form.id.value
         const location = form.location.value
         const date = form.date.value
-        // const notes = form.notes.value
         const donarEmail = form.donarEmail.value
         const donarName = form.donarName.value
         const money = form.money.value
@@ -34,7 +33,7 @@ const FoodDetails = () => {
 
             <div className="card card-compact p-7 bg-base-100 shadow-xl mb-4">
                 <figure>
-                    <img src={photo} className="w-full h-[350px]" alt="" />
+                    <img src={photo} className="w-full h-[350px]" alt="photo" />
                 </figure>
                 <div className="card-body items-center">
                     <h2 className="card-title ">{name}</h2>
