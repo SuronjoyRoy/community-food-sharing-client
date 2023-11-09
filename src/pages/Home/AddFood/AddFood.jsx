@@ -34,7 +34,7 @@ const AddFood = () => {
             donarEmail,
             status
         }
-        
+        console.log(newFood)
 
         // send data to the server side
 
