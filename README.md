@@ -7,3 +7,5 @@
 4. Environmental Benefits: By sharing food resources within a community, these websites contribute to a more sustainable environment. Food production and distribution have a substantial ecological footprint, and by sharing locally, the carbon footprint is reduced, making it an environmentally friendly initiative.
 
 5. Building a Sharing Economy: Community food sharing websites are part of the broader sharing economy trend, which emphasizes collaborative consumption and reducing waste. They encourage a culture of sharing not only for food but also for other resources and services within the community, fostering a sense of solidarity and mutual support.
+
+live link: https://various-partner.surge.sh/
