@@ -3,7 +3,7 @@ import Swal from "sweetalert2";
 import { AuthContext } from "../../../providers/AuthProvider";
 
 const AddFood = () => {
-   const {user} = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
 
     const handleAddFood = e => {
 
@@ -34,7 +34,7 @@ const AddFood = () => {
             donarEmail,
             status
         }
-    
+
 
         // send data to the server side
 
@@ -59,8 +59,6 @@ const AddFood = () => {
                     )
                 }
             })
-
-
     };
     return (
         <form onSubmit={handleAddFood} className="bg-white lg:p-20">
@@ -168,7 +166,6 @@ const AddFood = () => {
                     </label>
                     <label className="input-group">
                         <textarea className="textarea  input input-bordered w-full h-[80px]  " name="notes" placeholder=""></textarea>
-
                     </label>
                 </div>
             </div>
